@@ -1,0 +1,76 @@
+# ==========================================
+# Operating System Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# ==========================================
+# Editors & IDEs
+# ==========================================
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+# ==========================================
+# Environment & Local Secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# .NET / C# (Backend)
+# ==========================================
+**/[Bb]in/
+**/[Oo]bj/
+**/[Pp]ublish/
+*.publishsettings
+.nuget/
+Library/
+.local/
+
+# ==========================================
+# Flutter / Dart (Frontend)
+# ==========================================
+**/frontend/.dart_tool/
+**/frontend/.flutter-plugins
+**/frontend/.flutter-plugins-dependencies
+**/frontend/.packages
+**/frontend/.pub-cache/
+**/frontend/.pub/
+**/frontend/build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# ==========================================
+# Node.js & Cypress (Tests)
+# ==========================================
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Cypress test artifacts
+**/cypress/videos/
+**/cypress/screenshots/
+**/cypress/downloads/
