@@ -36,8 +36,8 @@ app.MapGet("/", () => Results.Redirect("/scalar/v1"));
 app.MapPost("/genera-password", (GeneratePasswordRequest? request) =>
 {
     int length = request?.Length is > 0 ? request.Length.Value : 16;
-    bool includeNumbers = request?.IncludeNumbers ?? true;
-    bool includeSymbols = request?.IncludeSymbols ?? true;
+    bool includeNumbers = request?.Number ?? true;
+    bool includeSymbols = request?.Symbol ?? true;
 
     string password = PasswordGeneratorService.GeneratePassword(length, includeNumbers, includeSymbols);
 
@@ -49,9 +49,9 @@ app.MapPost("/genera-password", (GeneratePasswordRequest? request) =>
 app.Run();
 
 public record GeneratePasswordRequest(
-    [property: JsonPropertyName("lunghezza")] int? Length,
-    [property: JsonPropertyName("numeri")] bool? IncludeNumbers,
-    [property: JsonPropertyName("simboli")] bool? IncludeSymbols
+    [property: JsonPropertyName("length")] int? Length,
+    [property: JsonPropertyName("number")] bool? Number,
+    [property: JsonPropertyName("symbol")] bool? Symbol
 );
 
 public record GeneratePasswordResponse(

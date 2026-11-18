@@ -60,9 +60,9 @@ class _PasswordGeneratorPageState extends State<PasswordGeneratorPage> {
 
     final url = Uri.parse('http://localhost:5000/genera-password');
     final payload = {
-      'lunghezza': length,
-      'numeri': _includeNumbers,
-      'simboli': _includeSymbols,
+      'length': length,
+      'number': _includeNumbers,
+      'symbol': _includeSymbols,
     };
 
     try {
